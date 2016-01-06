@@ -8,6 +8,7 @@ Type=simple
 StandardOutput=syslog
 StandardError=syslog
 SyslogIdentifier=rescue-rest
+WorkingDirectory=/opt/rescue-indoor/src/integrationserver/
 ExecStart=/opt/rescue-indoor/src/integrationserver/restserver.rb
 LimitCPU=infinity
 LimitFSIZE=infinity
