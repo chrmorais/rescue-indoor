@@ -1,0 +1,20 @@
+[Unit]
+Description=Rescue Indoor REST Server
+After=network.target
+
+[Service]
+User=root
+Type=simple
+StandardOutput=syslog
+StandardError=syslog
+SyslogIdentifier=rescue-rest
+ExecStart=/opt/rescue-indoor/src/integrationserver/restserver.rb
+LimitCPU=infinity
+LimitFSIZE=infinity
+LimitDATA=infinity
+LimitCORE=0
+LimitAS=infinity
+LimitLOCKS=infinity
+
+[Install]
+WantedBy=multi-user.target

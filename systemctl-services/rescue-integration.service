@@ -1,0 +1,20 @@
+[Unit]
+Description=Rescue Indoor Integration Server
+After=network.target
+
+[Service]
+User=root
+Type=simple
+StandardOutput=syslog
+StandardError=syslog
+SyslogIdentifier=rescue-integration
+ExecStart=/opt/rescue-indoor/src/integrationserver/integrationserver.rb 20606 <your-server-ip-address>
+LimitCPU=infinity
+LimitFSIZE=infinity
+LimitDATA=infinity
+LimitCORE=0
+LimitAS=infinity
+LimitLOCKS=infinity
+
+[Install]
+WantedBy=multi-user.target

@@ -4,6 +4,8 @@ require 'sinatra'
 require 'json'
 require './rescueindoormodel.rb'
 
+set :bind, '<your-server-ip-address>'
+
 # list all users
 get '/users' do
   User.all.to_json
